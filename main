@@ -1,0 +1,52 @@
+#include "monty.h"
+
+int n;
+
+int main(void)
+{
+	stack_t *stack = NULL, *stack2 = NULL;
+
+	push(&stack, 1);
+	pall(&stack, 2);
+	printf("-------------------------\n");
+
+	n = 51;
+	push(&stack, 3);
+	pall(&stack, 4);
+	printf("-------------------------\n");
+
+	n = 63;
+	push(&stack, 5);
+	pall(&stack, 6);
+	printf("-------------------------\n");
+
+	n = 74;
+	push(&stack, 7);
+	pall(&stack, 8);
+	printf("-------------------------\n");
+
+	printf("PRINT TOP INTEGER:\n");
+	pint(&stack, 9);
+	printf("-------------------------\n");
+
+	printf("ADD:\n");
+	add(&stack, 10);
+	pall(&stack, 11);
+	printf("-------------------------\n");
+
+	printf("SWAP:\n");
+	pall(&stack, 12);
+	printf("The top element is: ");
+	pint(&stack, 12);
+	swap(&stack, 13);
+	printf("Now, after swap, the top element is: ");
+	pint(&stack, 14);
+	printf("SWAPPED STACK\n");
+	pall(&stack, 14);
+	printf("-------------------------\n");
+
+	pop(&stack2, 15);
+	pall(&stack2, 16);
+
+	return (0);
+}
