@@ -4,7 +4,7 @@ The program monty is a local interpreter created to interpret the Monty language
 
 The program is run with following syntax:
 ` monty <file> `
-where **<file>** <file> is the path to a file containing a valid Monty bytecode.
+where **<file>** *file* is the path to a file containing a valid Monty bytecode.
 
 The monty program has currently implemented the following functionalities:
 * push - adds an int to the top of a stack_t stack

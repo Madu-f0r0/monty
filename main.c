@@ -12,39 +12,38 @@ int main(int argc, char **argv)
 {
 	char *str = NULL, **op_tokens;
 	FILE *monty_byte;
-	int tok_count, line_number = 0;
+	int line_number = 0;
 	stack_t *stack = NULL;
 
+	/* Confirm that the number of CL arguments is 1*/
 	confirm_arg_count(argc);
 
+	/* Open the filename passed as argument in read mode */
 	monty_byte = open_file(argv[1]);
 
+	/* Iterate till all the content of the opened file has been read */
 	do {
 		if (str)
 		{
 			free(str);
 			str = NULL;
 		}
+
+		/* Read line by line from the opened file */ 
 		str = read_from_stream(monty_byte);
 		line_number++;
 
+		/* Tokenize the line read from the opened file */
 		op_tokens = op_tokenizer(str);
-		if (op_tokens)
-		{
-			tok_count = token_counter(op_tokens);
 
-			if (op_tokens[0])
-			{
-				if (tok_count > 1 && check_if_digit(op_tokens[1]) == 0)
-					n = atoi(op_tokens[1]);
-
-				select_fxn(&stack, op_tokens, line_number);
-			}
-			set_me_free(op_tokens);
-		}
+		/* Execute a valid opdoce on the line read from the file */
+		exec_opcode(op_tokens, &stack, line_number);
 	} while (str);
 
+	/* After interpreting, free the memory used by the stack */
 	free_stack(stack);
+
+	/* Close the opened file stream */
 	fclose(monty_byte);
 	return (0);
 }

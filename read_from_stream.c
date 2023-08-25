@@ -4,7 +4,7 @@
  * read_from_stream - reads a line from a file stream
  * @stream: the file stream to read from
  *
- * Return: str
+ * Return: the string read from the file stream
  */
 char *read_from_stream(FILE *stream)
 {

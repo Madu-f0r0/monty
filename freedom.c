@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * set_me_free - frees lineptr and op_tokens in the main function
+ * set_me_free - frees op_tokens in the main function
  * @op_tokens: array of tokens from lineptr tokenizing
  */
 void set_me_free(char **op_tokens)
