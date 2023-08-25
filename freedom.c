@@ -1,10 +1,8 @@
 #include "monty.h"
-#include <stdlib.h>
 
 /**
  * set_me_free - frees lineptr and op_tokens in the main function
  * @op_tokens: array of tokens from lineptr tokenizing
- * @lineptr: variable containing the line read from the monty bytecde file
  */
 void set_me_free(char **op_tokens)
 {
@@ -18,5 +16,24 @@ void set_me_free(char **op_tokens)
 		}
 
 		free(op_tokens);
+	}
+}
+
+/**
+ * free_stack - frees a stack_t stack
+ * @stack: a pointer to the top location of the stack
+ */
+void free_stack(stack_t *stack)
+{
+	stack_t *temp;
+
+	if (stack)
+	{
+		while (stack)
+		{
+			temp = stack;
+			stack = stack->next;
+			free(temp);
+		}
 	}
 }

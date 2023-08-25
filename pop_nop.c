@@ -1,6 +1,4 @@
 #include "monty.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
  * pop - frees the top element of the stack

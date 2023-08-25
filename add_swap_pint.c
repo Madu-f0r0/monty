@@ -1,6 +1,4 @@
 #include "monty.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
  * add - adds the top two elements in a stack_t stack,

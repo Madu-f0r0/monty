@@ -8,6 +8,7 @@
 
 /* The integer to be manipulated by the stack functions */
 extern int n;
+int n;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -53,8 +54,12 @@ char *_strdup(char *str);
 int _strlen(char *s);
 int check_if_digit(char *num);
 void confirm_arg_count(int argc);
+void free_stack(stack_t *stack);
 char **op_tokenizer(char *lineptr);
 FILE *open_file(char *filename);
+char *read_from_stream(FILE *stream);
+void select_fxn(stack_t **stack, char **op_tokens, int line_number);
 void set_me_free(char **op_tokens);
+int token_counter(char **op_tokens);
 
 #endif /* MONTY_H */

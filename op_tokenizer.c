@@ -1,10 +1,8 @@
 #include "monty.h"
-#include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 /**
- * sh_tok - tokenizes the input string
+ * op_tokenizer - tokenizes the input string
  * @lineptr: a pointer to the input string in the shell wrapper function
  *
  * Return: the array containing the tokens created

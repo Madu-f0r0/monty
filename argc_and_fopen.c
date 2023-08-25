@@ -1,13 +1,12 @@
 #include "monty.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
- * confirm_argument_count - confirms that one CLA was passed to the program
+ * confirm_arg_count - confirms that one CLA was passed to the program
  * @argc: a reference to the argc in the main function
  */
 void confirm_arg_count(int argc)
 {
+	printf("argc is: %d\n", argc);
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");

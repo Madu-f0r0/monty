@@ -1,6 +1,5 @@
 #include "monty.h"
 #include <ctype.h>
-#include <stdlib.h>
 #include <string.h>
 
 /**
@@ -12,7 +11,7 @@
 int check_if_digit(char *num)
 {
 	int i;
-	
+
 	for (i = 0; num[i]; i++)
 	{
 		if (isdigit(num[i]) == 0)
