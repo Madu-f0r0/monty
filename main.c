@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 			str = NULL;
 		}
 
-		/* Read line by line from the opened file */ 
+		/* Read line by line from the opened file */
 		str = read_from_stream(monty_byte);
 		line_number++;
 
