@@ -54,6 +54,7 @@ char *_strdup(char *str);
 int _strlen(char *s);
 int check_if_digit(char *num);
 void confirm_arg_count(int argc);
+void exec_opcode(char **op_tokens, stack_t **stack, int line_number);
 void free_stack(stack_t *stack);
 char **op_tokenizer(char *lineptr);
 FILE *open_file(char *filename);
