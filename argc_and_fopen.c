@@ -6,7 +6,6 @@
  */
 void confirm_arg_count(int argc)
 {
-	printf("argc is: %d\n", argc);
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
