@@ -13,8 +13,9 @@ void select_fxn(stack_t **stack, char **op_tokens, int line_number)
 
 	/* Array of structs containing opcodes and matching functions */
 	instruction_t stack_fxns[] = {
-		{"push", push}, {"pall", pall}, {"pint", pint}
+		{"push", push}, {"pall", pall}, {"pint", pint}, {"sub", sub}
 		, {"pop", pop}, {"swap", swap}, {"add", add}, {"nop", nop}
+		, {"mul", mul}, {"div", divide}
 	};
 
 	/* Iterate through array to call the matching function for the opcode */
