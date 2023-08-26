@@ -14,6 +14,11 @@ int check_if_digit(char *num)
 
 	for (i = 0; num[i]; i++)
 	{
+		if (i == 0 && num[i] == '-')
+		{
+			continue;
+		}
+
 		if (isdigit(num[i]) == 0)
 		{
 			return (EXIT_FAILURE);
