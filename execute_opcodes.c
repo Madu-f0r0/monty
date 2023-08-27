@@ -18,6 +18,12 @@ void exec_opcode(char **op_tokens, stack_t **stack, int line_number)
 
 		if (op_tokens[0])
 		{
+			/* Skip line if the line is a comment */
+			if (op_tokens[0][0] == '#')
+			{
+				set_me_free(op_tokens);
+				return;
+			}
 			/* Return error if push opcode has no valid integer argument */
 			if (strcmp(op_tokens[0], "push") == 0)
 			{

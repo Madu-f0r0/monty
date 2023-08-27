@@ -43,6 +43,7 @@ typedef struct instruction_s
 /* Stack Functions */
 void add(stack_t **stack, unsigned int line_number);
 void divide(stack_t **stack, unsigned int line_number);
+void mod(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
